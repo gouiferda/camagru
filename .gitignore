@@ -1,0 +1,15 @@
+
+
+
+#Ignore deployment files
+config/database.php
+config/env.vars.php
+env.vars.php
+.DS_Store
+error_log
+uploads/*
+
+# keep some hiddens
+!.htaccess
+!.gitignore
+!./uploads

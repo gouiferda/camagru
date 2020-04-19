@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# Deny access to README.md
+<Files README.md>
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny access to error_log
+<Files error_log>
+Order allow,deny
+Deny from all
+</Files>
